@@ -34,6 +34,8 @@ ChatBot::~ChatBot()
 {
     std::cout << "ChatBot Destructor" << std::endl;
 
+    // TODO: use shared pointer for image, because every image has to be deleted.
+    // TODO: Currently, the image pointer is called twice which leads to a segfault.
     // deallocate heap memory
     if(_image != NULL) // Attention: wxWidgets used NULL and not nullptr
     {
